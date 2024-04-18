@@ -1,4 +1,5 @@
 import s from './style.module.css';
+import {fetchVin, generateRandomVIN} from "../../lib/vin";
 
 export function VinGeneratorBody(props) {
     const submit = (e) => {
@@ -9,8 +10,15 @@ export function VinGeneratorBody(props) {
         });
 
         console.log('click');
+
+        /*fetchVin().then(vin => {
+            // You can set the state here if you're using class components
+            // or use the useState hook if you're using functional components
+            console.log('Received VIN:', vin);
+        });*/
+        const generatedVin = generateRandomVIN()
         //props.onSubmit(generateVin(formData));
-        props.onSubmit("Test Vin");
+        props.onSubmit(generatedVin);
     }
 
     return <form onSubmit={submit}>
