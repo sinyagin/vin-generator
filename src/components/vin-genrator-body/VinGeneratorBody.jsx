@@ -25,16 +25,16 @@ export function VinGeneratorBody(props) {
     return <form onSubmit={submit}>
         <div className={s.grid_container}>
             <div className={s.grid_item}>
-                Real VIN <input name='auto' type='checkbox' defaultChecked={true}/>
+                Real VIN <input name='vin-type' type='radio' value='auto' defaultChecked={true}/>
             </div>
             <div className={s.grid_item}>
-                Motorcycle VIN <input name='mcy' type='checkbox' defaultChecked={false}/>
+                Motorcycle VIN <input name='vin-type' type='radio' value='mcy' defaultChecked={false}/>
             </div>
             <div className={s.grid_item}>
-                Velocity VIN <input name='vel' type='checkbox' defaultChecked={false}/>
+                Velocity VIN <input name='vin-type' type='radio' value='vel' defaultChecked={false}/>
             </div>
             <div className={s.grid_item}>
-                Unknown VIN <input name='mcy' type='checkbox' defaultChecked={false}/>
+                Unknown VIN <input name='vin-type' type='radio' value='unknown' defaultChecked={false}/>
             </div>
         </div>
 
