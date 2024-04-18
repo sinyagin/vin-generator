@@ -10,6 +10,7 @@ export function VinGeneratorBody(props) {
         });
 
         console.log('click');
+        console.log(formData);
 
         /*fetchVin().then(vin => {
             // You can set the state here if you're using class components
@@ -24,10 +25,16 @@ export function VinGeneratorBody(props) {
     return <form onSubmit={submit}>
         <div className={s.grid_container}>
             <div className={s.grid_item}>
-                Real Random VIN <input name = 'real' type='checkbox' defaultChecked={true}/>
+                Real VIN <input name='auto' type='checkbox' defaultChecked={true}/>
             </div>
             <div className={s.grid_item}>
-                Valid Random VIN <input name = 'number' type='checkbox' defaultChecked={false}/>
+                Motorcycle VIN <input name='mcy' type='checkbox' defaultChecked={false}/>
+            </div>
+            <div className={s.grid_item}>
+                Velocity VIN <input name='vel' type='checkbox' defaultChecked={false}/>
+            </div>
+            <div className={s.grid_item}>
+                Unknown VIN <input name='mcy' type='checkbox' defaultChecked={false}/>
             </div>
         </div>
 
